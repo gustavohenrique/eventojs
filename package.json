@@ -4,11 +4,15 @@
   "description": "An easy way to add/remove events on DOM components",
   "author": "Gustavo Henrique",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/unit.js"
+    "test": "./node_modules/.bin/mocha tests/unit.js",
+    "start": "./node_modules/.bin/protractor protractor.conf"
   },
   "license": "MIT",
   "devDependencies": {
     "chai": "^1.9.2",
-    "mocha": "^2.0.1"
+    "jshint": "^2.5.6",
+    "mocha": "^2.0.1",
+    "phantomjs": "^1.9.12",
+    "protractor": "^1.3.1"
   }
 }
