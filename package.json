@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "An easy way to add/remove events on DOM components",
   "author": "Gustavo Henrique",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/unit.js"
+  },
   "license": "MIT",
   "devDependencies": {
     "chai": "^1.9.2",
