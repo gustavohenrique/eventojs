@@ -1,0 +1,11 @@
+{
+  "name": "easyevent",
+  "version": "0.0.1",
+  "description": "An easy way to add/remove events on DOM components",
+  "author": "Gustavo Henrique",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  }
+}
