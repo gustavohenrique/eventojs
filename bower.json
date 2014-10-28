@@ -1,0 +1,26 @@
+{
+  "name": "easyevent",
+  "main": "easyevent.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/gustavohenrique/easyevent",
+  "description": "An easy way to manipulate events on DOM components",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "event",
+    "dom"
+  ],
+  "authors": [
+    "Gustavo Henrique"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
