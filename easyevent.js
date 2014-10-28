@@ -2,16 +2,41 @@ var EasyEvent = (function () {
     
     var self = this;
 
+    var config = {
+        css: {
+            hide: 'hide'
+        }
+    };
+
+    function getDomEvents() {
+        var events = [];
+        for (attr in document) {
+            if (attr.substring(0,2) === 'on') {
+                var evt = attr.replace('on', '');
+                events.push(evt);
+            }
+        }
+        return events;
+    };
+
+    var DOM_EVENTS = getDomEvents();
+
     var commonFunctions = {
         bind: function (evt, fn) {
             self._events = self._events || {};
             self._events[evt] = fn;
         },
 
-        trigger: function (evt) {
+        trigger: function (evt, args) {
             self._events = self._events || {};
             if (! self._events.hasOwnProperty(evt)) return;
-            self._events[evt].apply();
+
+            if (args !== undefined && args !== null) {
+                self._events[evt].apply(this, [args]);    
+            }
+            else {
+                self._events[evt].apply(this);
+            }
         }
     };
 
@@ -23,11 +48,34 @@ var EasyEvent = (function () {
         removeClass: function (className) {
             this.classList.remove(className);
         },
-        
-        show: function (className) {},
-        hide: function (className) {},
-        addEvent: function (className) {},
-        removeEvent: function (className) {}
+
+        show: function () {
+            this.classList.remove(config.css.hide);
+        },
+
+        hide: function () {
+            this.addClass(config.css.hide);  
+        },
+
+        bind: function (evt, fn) {
+            var isDomEvent = (DOM_EVENTS.indexOf(evt) >= 0);
+            if (isDomEvent) {
+                this.addEventListener(evt, fn);
+            }
+            else {
+                commonFunctions.bind(evt, fn);
+            }
+        },
+
+        trigger: function (evt, args) {
+            var isDomEvent = (DOM_EVENTS.indexOf(evt) >= 0);
+            if (isDomEvent) {
+                this.dispatchEvent(new Event(evt));
+            }
+            else {
+                commonFunctions.trigger(evt, args);
+            }  
+        }
     };
 
     var _add = function (func, functions, obj) {
@@ -39,16 +87,23 @@ var EasyEvent = (function () {
         }
     };
 
+    self.configure = function (config) {
+        self.config = config;
+        return self;
+    };
+
     self.applyTo = function (obj) {
         for (func in commonFunctions) {
             _add(func, commonFunctions, obj);
         }
+        return self;  
     };
 
     self.applyToHtml = function (obj) {
         for (func in visualFunctions) {
             _add(func, visualFunctions, obj);
         }
+        return self;
     };
 
     return self;
