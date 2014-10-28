@@ -16,8 +16,14 @@ var EasyEvent = (function () {
     };
 
     var visualFunctions = {
-        addClass: function (className) {},
-        removeClass: function (className) {},
+        addClass: function (className) {
+            this.classList.add(className);
+        },
+
+        removeClass: function (className) {
+            this.classList.remove(className);
+        },
+        
         show: function (className) {},
         hide: function (className) {},
         addEvent: function (className) {},
@@ -37,11 +43,11 @@ var EasyEvent = (function () {
         for (func in commonFunctions) {
             _add(func, commonFunctions, obj);
         }
+    };
 
+    self.applyToHtml = function (obj) {
         for (func in visualFunctions) {
-            if (obj.hasOwnProperty('isHtml') && obj.isHtml) {
-                _add(func, visualFunctions, obj);
-            }
+            _add(func, visualFunctions, obj);
         }
     };
 

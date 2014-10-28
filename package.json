@@ -4,8 +4,10 @@
   "description": "An easy way to add/remove events on DOM components",
   "author": "Gustavo Henrique",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/unit.js",
-    "start": "./node_modules/.bin/protractor protractor.conf"
+    "unittest": "./node_modules/.bin/mocha tests/unit.js",
+    "server": "http-server",
+    "test": "./node_modules/.bin/protractor protractor.conf",
+    "webdriver": "./node_modules/.bin/webdriver-manager start"
   },
   "license": "MIT",
   "devDependencies": {
