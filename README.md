@@ -1,5 +1,5 @@
-Evento
-======
+EventoJS
+========
 
 Evento is a simple and easy library to works with javascript's events.  
 You can add a custom events or the common DOM events.
