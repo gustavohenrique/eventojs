@@ -1,27 +1,27 @@
-EasyEvent
-=========
+Evento
+======
 
-EasyEvent is a simple and easy library to works with javascript's events.  
+Evento is a simple and easy library to works with javascript's events.  
 You can add a custom events or the common DOM events.
 
 ## Installation
 
-    bower install easyevent
+    bower install eventojs
 
-Or just add the `easyevent.js` on the HTML file.
+Or just add the `evento.js` on the HTML file.
 
-    <script src="easyevent.js"></script>
+    <script src="evento.js"></script>
 
 ## Usage
 
-Just call `EasyEvent.applyTo` for simple objects or `EasyEvent.applyToHtml` for DOM elements.
+Just call `Evento.applyTo` for simple objects or `Evento.applyToHtml` for DOM elements.
 
 ### Simple objects
 
     var person = {
         name: Gustavo
     };
-    EasyEvent.applyTo(person);
+    Evento.applyTo(person);
     person.bind('say', function (message) {
         console.log(message);
     });
@@ -30,7 +30,7 @@ Just call `EasyEvent.applyTo` for simple objects or `EasyEvent.applyToHtml` for 
 ### DOM elements
 
     var button = document.querySelector('#myButton');
-    EasyEvent.applyTo(button);
+    Evento.applyTo(button);
     button.bind('click', function () {
         console.log('Hello!!!');
     });
@@ -44,17 +44,19 @@ Atach an event.
 
 ### trigger
 
-### addClass
-
-### removeClass
+Run the function added by `bind`
 
 ### show
 
-Removes the `hide` class
+Removes the `hide`
 
 ### hide
 
-Add the `hide` class
+Add the `hide` class contains `display:none`
+
+### addClass
+
+### removeClass
 
 ## License
 

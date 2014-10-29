@@ -1,4 +1,4 @@
-var EasyEvent = (function () {
+var Evento = (function () {
     
     var self = this;
 
@@ -111,5 +111,5 @@ var EasyEvent = (function () {
 })();
 
 if (typeof module !== 'undefined' && ('exports' in module)) {
-    module.exports  = EasyEvent;
+    module.exports  = Evento;
 }

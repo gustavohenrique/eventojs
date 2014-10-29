@@ -1,4 +1,4 @@
-describe('EasyEvent for DOM', function() {
+describe('Evento', function() {
 
     beforeEach(function() {
         browser.ignoreSynchronization = true;
@@ -8,7 +8,7 @@ describe('EasyEvent for DOM', function() {
     it('addClass', function() {
         nav.executeScript(function() {
             var div = document.querySelector('#shape');
-            EasyEvent.applyToHtml(div);
+            Evento.applyToHtml(div);
             div.addClass('circle');
         });
 
@@ -18,7 +18,7 @@ describe('EasyEvent for DOM', function() {
     it('removeClass', function() {
         nav.executeScript(function() {
             var div = document.querySelector('#shape');
-            EasyEvent.applyToHtml(div);
+            Evento.applyToHtml(div);
             div.removeClass('triangle');
         });
 
@@ -28,7 +28,7 @@ describe('EasyEvent for DOM', function() {
     it('show', function() {
         nav.executeScript(function() {
             var div = document.querySelector('#hidden');
-            EasyEvent.applyToHtml(div);
+            Evento.applyToHtml(div);
             div.show();
         });
         nav.sleep(500);
@@ -39,7 +39,7 @@ describe('EasyEvent for DOM', function() {
     it('hide', function() {
         nav.executeScript(function() {
             var div = document.querySelector('#visible');
-            EasyEvent.applyToHtml(div);
+            Evento.applyToHtml(div);
             div.hide();
         });
 
@@ -49,7 +49,7 @@ describe('EasyEvent for DOM', function() {
     it('bind and trigger DOM events', function() {
         nav.executeScript(function() {
             var div = document.querySelector('#button');
-            EasyEvent.applyToHtml(div);
+            Evento.applyToHtml(div);
             div.bind('click', function () {
                 document.querySelector('#result').innerHTML += 'the click event.';
             });
@@ -68,7 +68,7 @@ describe('EasyEvent for DOM', function() {
     it('bind and trigger custom events with arguments', function() {
         nav.executeScript(function() {
             var div = document.querySelector('#button');
-            EasyEvent.applyToHtml(div);
+            Evento.applyToHtml(div);
             div.bind('hello', function (text) {
                 document.querySelector('#result').innerHTML = text;
             });

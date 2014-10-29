@@ -1,13 +1,9 @@
 {
-  "name": "easyevent",
-  "main": "easyevent.js",
-  "version": "1.0.0",
-  "homepage": "https://github.com/gustavohenrique/easyevent",
+  "name": "eventojs",
+  "main": "evento.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gustavohenrique/eventojs",
   "description": "An easy way to manipulate events on DOM components",
-  "moduleType": [
-    "amd",
-    "globals"
-  ],
   "keywords": [
     "event",
     "dom"

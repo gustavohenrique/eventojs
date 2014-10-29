@@ -1,13 +1,13 @@
 {
-  "name": "easyevent",
-  "version": "1.0.0",
-  "description": "An easy way to add/remove events on DOM components",
+  "name": "eventojs",
+  "version": "0.0.1",
+  "description": "An easy way to manipulate events on DOM components",
   "author": "Gustavo Henrique",
   "scripts": {
     "http-server": "./node_modules/.bin/http-server",
     "test": "./node_modules/.bin/protractor protractor.conf",
     "webdriver": "./node_modules/.bin/webdriver-manager start",
-	"minify": "./node_modules/.bin/minify easyevent.js > easyevent.min.js"
+	  "minify": "./node_modules/.bin/minify src/evento.js > src/evento.min.js"
   },
   "license": "MIT",
   "devDependencies": {
