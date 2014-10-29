@@ -1,20 +1,20 @@
 EventoJS
 ========
 
-Evento is a simple and easy library to works with javascript's events.  
-You can add a custom events or the common DOM events.
+Evento is a simple and easy library to works with javascript events.  
+You can add a custom events or the DOM events like click, mouseover, etc.
 
 ## Installation
 
     bower install eventojs
 
-Or just add the `evento.js` on the HTML file.
+Or just add the `evento.js` in the HTML file.
 
     <script src="evento.js"></script>
 
 ## Usage
 
-Just call `Evento.applyTo` for simple objects or `Evento.applyToHtml` for DOM elements.
+Just use `Evento.applyTo` for simple objects or `Evento.applyToHtml` for DOM elements.
 
 ### Simple objects
 
@@ -40,23 +40,27 @@ Just call `Evento.applyTo` for simple objects or `Evento.applyToHtml` for DOM el
 
 ### bind
 
-Atach an event.
+Binds a function on event
 
 ### trigger
 
-Run the function added by `bind`
+Runs the function added by `bind`
 
 ### show
 
-Removes the `hide`
+Removes the `hide` class
 
 ### hide
 
-Add the `hide` class contains `display:none`
+Adds the `hide` class that contains `display:none`
 
 ### addClass
 
+Adds a css class
+
 ### removeClass
+
+Removes a css class
 
 ## License
 
